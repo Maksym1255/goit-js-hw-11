@@ -96,6 +96,7 @@ async function updateBtnStatus() {
       iziToast.info({
         title: 'The End!',
         message: 'End of collection!',
+        position: 'topCenter',
       });
     }
   } else {
