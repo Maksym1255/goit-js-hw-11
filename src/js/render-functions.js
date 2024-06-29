@@ -3,6 +3,8 @@ import 'simplelightbox/dist/simple-lightbox.min.css';
 
 export function renderGallery(images) {
   const gallery = document.getElementById(`gallery`);
+  gallery.innerHTML = '';
+
   const markup = images
     .map(
       ({
@@ -33,7 +35,7 @@ export function renderGallery(images) {
     )
     .join('');
 
-  gallery.insertAdjacentHTML('beforeend', markup);
+  gallery.innerHTML = markup;
 
   const lightbox = new SimpleLightbox(`.gallery a`);
   lightbox.refresh();
